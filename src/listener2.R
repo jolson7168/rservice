@@ -1,3 +1,5 @@
+#source("/home/ec2-user/git/rservice/src/listener2.R")
+
 library(httpuv)
 
 	.lastMessage <- NULL
@@ -52,5 +54,5 @@ app <- list(
 		})
 	}
 )
-server <- startDaemonizedServer("0.0.0.0", 5729, app)
+server <- runServer(host, port, app, interruptIntervalMs = ifelse(interactive(), 100,1000))
 print(server)
