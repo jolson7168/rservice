@@ -54,5 +54,5 @@ app <- list(
 		})
 	}
 )
-server <- runServer(host, port, app, interruptIntervalMs = ifelse(interactive(), 100,1000))
+server <- runServer("0.0.0.0", 5729, app, interruptIntervalMs = ifelse(interactive(), 100,1000))
 print(server)
