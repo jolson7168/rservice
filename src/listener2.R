@@ -52,4 +52,4 @@ app <- list(
 		})
 	}
 )
-server <- startDaemonizedServer("0.0.0.0", 6011, app)
+server <- startDaemonizedServer("0.0.0.0", 5729, app)
