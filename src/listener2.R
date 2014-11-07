@@ -53,3 +53,4 @@ app <- list(
 	}
 )
 server <- startDaemonizedServer("0.0.0.0", 5729, app)
+print(server)
