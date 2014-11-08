@@ -6,6 +6,10 @@ library(httpuv)
 app <- list(
 	call = function(req) {
 		wsUrl = paste(sep='','"',"ws://",ifelse(is.null(req$HTTP_HOST), req$SERVER_NAME, req$HTTP_HOST),'"')
+		print(req$REQUEST_METHOD)
+		bod <- req[["rook.input"]]
+		postdata <- bod$read_lines()
+		print(postdata)
 		list(
 			status = 200L,
 			headers = list(
