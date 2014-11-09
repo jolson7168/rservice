@@ -1,6 +1,7 @@
 #source("/home/ec2-user/git/rservice/src/listener2.R")
 
 library(httpuv)
+library(jsonlite)
 
 	.lastMessage <- NULL
 app <- list(
