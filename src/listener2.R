@@ -17,7 +17,7 @@ app <- list(
 			headers = list(
 				'Content-Type' = 'application/json'
 			),
-			body <- toJSON(bodJSON, pretty=TRUE)
+			body = paste(toJSON(bodJSON, pretty=TRUE))
 		)
 	},
 
