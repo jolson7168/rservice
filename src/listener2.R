@@ -9,13 +9,14 @@ app <- list(
 		print(req$REQUEST_METHOD)
 		bod <- req[["rook.input"]]
 		postdata <- bod$read_lines()
-		print(postdata)
+		bodJSON <- fromJSON(postdata)
+		bodJSON$status<-paste("Success!")
 		list(
 			status = 200L,
 			headers = list(
-				'Content-Type' = 'text/html'
+				'Content-Type' = 'application/json'
 			),
-			body = "hello world!"
+			body <- toJSON(bodJSON, pretty=TRUE)
 		)
 	},
 
